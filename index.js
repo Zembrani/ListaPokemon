@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import Home from './components/Home';
+import Home from './pages/Home';
 import Pokemon from './components/Pokemon'
 
 const Pagina404 = () => (<div>pagina 404</div>)

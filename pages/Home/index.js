@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Buttons from '../buttons';
-import Header from '../header'
-import ListPokemons from '../listPokemons';
+import Buttons from '../../components/buttons';
+import Header from '../../components/header'
+import ListPokemons from '../../components/listPokemons';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
@@ -19,6 +19,9 @@ export default function Home() {
        setPokemon(res.data.results)
        setNextUrl(res.data.next)
        setPrevUrl(res.data.previous)
+      })
+      .catch(error => {
+        console.log(error)
       })
   }, [currentUrl])
 
